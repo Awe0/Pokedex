@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://clv1apbe4kb61"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_aeudf"]
+[ext_resource type="PackedScene" uid="uid://bjgjtucrm2hd4" path="res://Scenes/infos.tscn" id="3_0nuwh"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_aeudf")
+
+[node name="Infos" parent="." instance=ExtResource("3_0nuwh")]
+
+[connection signal="pokemonsAreCreated" from="." to="Infos" method="_on_main_pokemons_are_created"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjgjtucrm2hd4"]
+
+[ext_resource type="Script" path="res://Scripts/infos.gd" id="1_vnmyf"]
+[ext_resource type="PackedScene" uid="uid://po38pddaajk6" path="res://Scenes/button.tscn" id="2_583cv"]
+
+[node name="InfosScene" type="CanvasLayer"]
+script = ExtResource("1_vnmyf")
+button = ExtResource("2_583cv")
+
+[node name="MainBox" type="HBoxContainer" parent="."]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainBox"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainBox/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+follow_focus = true
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MainBox/HBoxContainer/ScrollContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RightBoxInfo" type="VBoxContainer" parent="MainBox"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainBox/RightBoxInfo"]
+layout_mode = 2
+
+[node name="ImgPokemon" type="TextureRect" parent="MainBox/RightBoxInfo/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+stretch_mode = 4
+
+[node name="NamePokemon" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer"]
+layout_mode = 2
+text = "Bulbizar"
+
+[node name="BoxStatsName" type="VBoxContainer" parent="MainBox/RightBoxInfo/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+
+[node name="Type" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer/BoxStatsName"]
+layout_mode = 2
+text = "Type     : "
+
+[node name="Weight" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer/BoxStatsName"]
+layout_mode = 2
+text = "Weight :"
+
+[node name="Height" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer/BoxStatsName"]
+layout_mode = 2
+text = "Height :   "
+
+[node name="BoxStatsData" type="VBoxContainer" parent="MainBox/RightBoxInfo/HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+
+[node name="Type" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer/BoxStatsData"]
+layout_mode = 2
+
+[node name="Weight" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer/BoxStatsData"]
+layout_mode = 2
+
+[node name="Height" type="Label" parent="MainBox/RightBoxInfo/HBoxContainer/BoxStatsData"]
+layout_mode = 2
